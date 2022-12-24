@@ -35,7 +35,7 @@ For example:
 ###  Difference between a Library and Framework?
 >*The main distinction between a framework and a library is that a framework inverts program control. It informs the developer of what they require. A library, however, does not. Instead, a programmer calls the library when and where he needs it.*
 
-<img src="./assets/libVsFrame.png" alt="library vs framework image" style="height: 280px; width:460px;"/>
+<img src="./assets/libVsFrame.png" alt="library vs framework image" style="height: 280px; width:540px;"/>
 
 
 Both frameworks and libraries are code written by someone else that is used to help solve common problems.
@@ -104,7 +104,7 @@ Here MVC means:
 
 ***Model–view–controller*** is a software architectural pattern commonly used for developing user interfaces that divide the related program logic into three interconnected elements. This is done to separate internal representations of information from the ways information is presented to and accepted from the user.
 
-<img src="./assets/mvc.png" alt="library vs framework image" style="height: 320px; width:460px;"/>
+<img src="./assets/mvc.png" alt="library vs framework image" style="height: 420px; width:640px;"/>
 
 ### What is crossorigin in script tag?
 
@@ -133,7 +133,7 @@ Because ***React-DOM binds the idea of React to a web browser.*** And ideally, *
 
  > ***Defer*** - means execute code after it's downloaded and browser finished DOM construction and rendering process.
 
- <img src="./assets/async-defer.jpg" alt="library vs framework image" style="height: 400px; width:460px;"/>
+ <img src="./assets/async-defer.jpg" alt="library vs framework image" style="height: 400px; width:640px;"/>
 
 #### No attributes
 
@@ -157,3 +157,12 @@ Finally, the defer attribute builds on top of the previous behavior to guarantee
 ```HTML
 <script src="script.js" defer></script>
 ```
+
+#### JavaScript code injection in an HTML document , Why put ```</script>``` tag in body not in head
+>*The best practice is to put JavaScript ```<script>``` tags just before the closing ```</body>``` tag rather than in the ```<head>``` section of your HTML.*
+
+The reason for this is that HTML loads from top to bottom. The head loads first, then the body, and then everything inside the body. If we put our JavaScript in the head section, the entire JavaScript will load before loading any of the HTML, which could cause a few problems :
+- If you have code in your JavaScript that alters HTML as soon as the JavaScript code loads, there won’t actually be any HTML elements available for it to affect yet, so it will seem as though the JavaScript code isn’t working, and you may get errors.
+- If you have a lot of JavaScript, it can visibly slow the loading of your page because it loads all of the JavaScript before it loads any of the HTML.
+
+When you place your JavaScript at the bottom of your HTML body, it gives the HTML time to load before any of the JavaScript loads, which can prevent errors, and speed up website response time.
