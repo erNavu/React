@@ -133,7 +133,7 @@ Because ***React-DOM binds the idea of React to a web browser.*** And ideally, *
 
  > ***Defer*** - means execute code after it's downloaded and browser finished DOM construction and rendering process.
 
- <img src="./assets/async-defer.jpg" alt="library vs framework image" style="height: 400px; width:640px;"/>
+ <img src="./assets/async-defer.jpg" alt="library vs framework image" style="height: 600px; width:740px;"/>
 
 #### No attributes
 
