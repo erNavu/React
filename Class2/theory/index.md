@@ -261,11 +261,29 @@ So what’s the point of having the node_modules folder in Git? There isn’t on
 vendor/ 
 ```
 *  `*`is used as a wildcard match *.exe will ignore any file with the .exe extension
-/ will ignore directories with the name. vendor/ ignores the vendor directory.
-* ``# will comment the line
+* `/` is used to ignore pathnames relative to the gitignore file.`/` will ignore directories with the name. vendor/ ignores the vendor directory.
+* ` #` is used to add comments to a .gitignore file
 * `[…]` will ignore values with any of the values.
     * `*.[abc]` ignores files file.a, file.b, file.c.
     * `*.[a-*.[oa]d]` the dash will include a range, in this case, file extensions a-d.
+
+```properties
+# Ignore Mac system files
+.DS_store
+
+# Ignore node_modules folder
+node_modules
+
+# Ignore all text files
+*.txt
+
+# Ignore files related to API keys
+.env
+
+# Ignore SASS config files
+.sass-cache
+```
+
 
 #### Items to put in the .gitignore
 * `System-specific files`
