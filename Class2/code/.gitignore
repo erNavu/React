@@ -8,6 +8,8 @@ node_modules
 
 dist/
 
+package-lock.json
+
 # Ignore files related to API keys
 .env
 
