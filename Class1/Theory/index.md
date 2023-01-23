@@ -35,8 +35,7 @@ For example:
 ###  Difference between a Library and Framework?
 >*The main distinction between a framework and a library is that a framework inverts program control. It informs the developer of what they require. A library, however, does not. Instead, a programmer calls the library when and where he needs it.*
 
-<img src="./assets/libVsFrame.png" alt="library vs framework image" style="height: 280px; width:540px;"/>
-
+<img src="../../assetsTheory/libVsFrame.png" alt="library vs framework image" style="height: 280px; width:540px;"/>
 
 Both frameworks and libraries are code written by someone else that is used to help solve common problems.
 
@@ -61,7 +60,7 @@ Examples: React, JQuery
 
 >***CDN refers to a geographically distributed network of servers for delivering content.***
  
- <img src="./assets/cdn.png" alt="CDN image" style="height: 400px; width:460px;"/>
+ <img src="../../assetsTheory/cdn.png" alt="CDN image" style="height: 400px; width:460px;"/>
 
 A CDN is essentially a network of geographically dispersed servers. Each CDN node (also called Edge Server) caches the static content of a site like the images, CSS/JS files and other structural components. The majority of an end-user’s page load time is spent on retrieving this content, and so it makes sense to provide these “building blocks” of a site in as many server nodes as possible, distributed throughout the world.
 
@@ -104,7 +103,7 @@ Here MVC means:
 
 ***Model–view–controller*** is a software architectural pattern commonly used for developing user interfaces that divide the related program logic into three interconnected elements. This is done to separate internal representations of information from the ways information is presented to and accepted from the user.
 
-<img src="./assets/mvc.png" alt="library vs framework image" style="height: 420px; width:640px;"/>
+<img src="../../assetsTheory/mvc.png" alt="library vs framework image" style="height: 420px; width:640px;"/>
 
 ### What is crossorigin in script tag?
 
@@ -133,7 +132,7 @@ Because ***React-DOM binds the idea of React to a web browser.*** And ideally, *
 
  > ***Defer*** - means execute code after it's downloaded and browser finished DOM construction and rendering process.
 
- <img src="./assets/async-defer.jpg" alt="library vs framework image" style="height: 600px; width:740px;"/>
+ <img src="../../assetsTheory/async-defer.jpg" alt="library vs framework image" style="height: 600px; width:740px;"/>
 
 #### No attributes
 

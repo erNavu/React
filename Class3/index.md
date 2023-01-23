@@ -23,7 +23,7 @@ const element = <h1>{title}</h1>;
 By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps `prevent XSS (cross-site-scripting) attacks`.
 
 
-!["DOM element"](../theory/assets/domObj.png)
+!["DOM element"](../assetsTheory/domObj.png)
 
 Here are some of the DOM elements you’ll encounter:
 
@@ -59,7 +59,7 @@ The type attribute is used to define the type of script, and the options availab
 ## Transitive Dependencies
 A transitive dependency exists when you have the following functional dependency pattern:
 
-!["Transitive Dependencies"](../theory/assets/transitive.jpeg)
+!["Transitive Dependencies"](../assetsTheory/transitive.jpeg)
 
 ## what is babel ?
 

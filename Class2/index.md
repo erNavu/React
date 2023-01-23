@@ -41,7 +41,7 @@ example :``` ^2.3.4 => 2.*.*```
 ~version “Approximately equivalent to version”, will update you to all future patch versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <1.3.0. example ```~1.2.3 => 1.2.*```
 
 
-!["^ caret and ~ tilda"](../theory/assets/tilde-carett.jpeg?raw=true "^caret and ~tilda")
+!["^ caret and ~ tilda"](../assetsTheory/tilde-carett.jpeg?raw=true "^caret and ~tilda")
 
 ## What is package.json ?
 ```package.json``` file is common file which has all information of packages required by our application, also known as dependencies.
@@ -49,20 +49,20 @@ example :``` ^2.3.4 => 2.*.*```
 All data stored in the package.json has a technical name i.e., ```metadata```.
 
 It includes information such as the project's name, version, description, authors, license, and required dependencies.
-!["packageJson"](../theory/assets/dependencies.webp?raw=true)
+!["packageJson"](../assetsTheory/dependencies.webp?raw=true)
 
 ## What is package-lock.json file?
 
 ```package-lock.json``` has same purpose as package.json file but this is used in real hosting environment instead of local or development environment.
 
 The `package-lock.json` file is generated when dependencies are installed and contains a detailed, exact list of all the dependencies and their versions. It helps ensure that everyone working on the project has the same version of the dependencies.
-!["packageLockJson"](../theory/assets/package_lock.webp?raw=true)
+!["packageLockJson"](../assetsTheory/package_lock.webp?raw=true)
 
 It locks the versions of libraries for production use.
 
 `Never put package-lock.json file in git ignore.`
 
-!["packageLockJson"](../theory/assets/lockFile.webp?raw=true)
+!["packageLockJson"](../assetsTheory/lockFile.webp?raw=true)
 
 ## Why should I not modify `package-lock.json`?
 `It is a generated file and is not designed to be manually edited.` Its purpose is to track the entire tree of dependencies (including dependencies of dependencies) and the exact version of each dependency. 
