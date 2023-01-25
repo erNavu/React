@@ -1,10 +1,43 @@
-body{
-    background:gray
+.app{
+    margin: 4px;
+    padding :4px
 }
-#container{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: #fff;
+.titleJsx, .title, .headerFunc{
+    border: solid 1px red;
+    padding: 8px;
+    margin: 4px 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.logo{
+    display: flex;
+    align-items: center;
+}
+.company_logo{
+    width: 92px;
+    border-radius: 50%;
+}
+.company_name{
+   margin-left: 4px;
+   font-size: 24px;
+   color: #cf5b47;
+   font-weight: 600;
+}
+.userIcon{
+    cursor: pointer;
+    margin-right: 4px;
+
+}
+.search_input{
+    margin-left: -28px;
+    width: 464px;
+    height: 48px;
+    padding: 2px 16px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid grey;
 }

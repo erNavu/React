@@ -119,3 +119,11 @@ const App = () => {
 `Prop drilling` is the act of passing props through multiple layers of components.
 
 Read in detail here : https://felixgerschau.com/react-component-composition/#:~:text=Component%20composition%20is%20the%20name,new%20components%20with%20other%20components.
+
+
+`References :`
+Babel : https://babeljs.io/
+Attribute type : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-type
+JS module : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+babel playground : https://babeljs.io/repl#
+React without jsx : https://reactjs.org/docs/react-without-jsx.html
