@@ -127,3 +127,17 @@ Attribute type : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/scrip
 JS module : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 babel playground : https://babeljs.io/repl#
 React without jsx : https://reactjs.org/docs/react-without-jsx.html
+
+## 𝗦𝘁𝗲𝗽𝘀 𝗽𝗲𝗿𝗳𝗼𝗿𝗺𝗲𝗱 𝗯𝗲𝗵𝗶𝗻𝗱 𝘁𝗵𝗲 𝘀𝗰𝗲𝗻𝗲𝘀 𝘄𝗵𝗲𝗻 𝘆𝗼𝘂 𝗰𝗿𝗲𝗮𝘁𝗲 𝗮 𝗯𝘂𝗶𝗹𝗱 𝗳𝗼𝗿 𝗮 𝗥𝗲𝗮𝗰𝘁 𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻
+
+Creating a build for a React application has following steps :
+
+`𝗧𝗿𝗮𝗻𝘀𝗽𝗶𝗹𝗶𝗻𝗴`: The React code is written in JavaScript, but it uses JSX syntax which is not understood by web browsers, therefore, the first step is to transpile the JSX code into regular JavaScript code that can be understood by web browsers. This is typically done using a tool called Babel.
+
+`𝗕𝘂𝗻𝗱𝗹𝗶𝗻𝗴`: The next step is to bundle all the JavaScript files together into a single file. This is done to make the application more performant by reducing the number of HTTP requests that need to be made. This is typically done using a tool called Webpack.
+
+`𝗠𝗶𝗻𝗶𝗳𝘆𝗶𝗻𝗴`: The bundle file created in the previous step is often quite large, so the code is minified, which removes unnecessary white spaces and comments and renames variables to shorter names.
+
+`𝗢𝗽𝘁𝗶𝗺𝗶𝘇𝗶𝗻𝗴`: To improve the performance of the application, the final step is to optimize the build. This step includes code splitting, which separates the code into smaller chunks, so only the code needed for the current page is loaded, and lazy loading, which delays the loading of certain components until they are needed.
+
+`𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝗻𝗴 𝘁𝗵𝗲 𝗳𝗶𝗻𝗮𝗹 𝗯𝘂𝗶𝗹𝗱`: The final step is to generate the final build. This step creates a directory of all the files needed for the application to run in a production environment.

@@ -1,12 +1,9 @@
 .app{
     margin: 4px;
-    padding :4px
+    padding :4px;
+    font-family: sans-serif;
 }
-.titleJsx, .title, .headerFunc{
-    border: solid 1px red;
-    padding: 8px;
-    margin: 4px 0;
-}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -32,12 +29,49 @@
     margin-right: 4px;
 
 }
-.search_input{
-    margin-left: -28px;
-    width: 464px;
-    height: 48px;
-    padding: 2px 16px;
-    font-size: 20px;
-    border-radius: 8px;
-    border: 1px solid grey;
+.restaurant_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+.restaurant_card{
+    width: 320px;
+    height:360px;
+    margin: 0px 4px 16px 0px;
+    /* border: 1px solid grey;
+    border-radius: 4px; */
+
+}
+.restaurant_img{
+    width: 100%;
+}
+.restaurant_card_text{
+   padding: 2px 8px; 
+}
+.restaurant_card_name{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+.restaurant_card_cuisines{
+    color: #535665;
+    font-size: 16px;
+    margin: 4px 0;
+}
+.restaurant_card_footer{
+    color: #535665;
+    font-size: 14px;
+    padding: 4px 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navItems{
+    display: flex;
+    justify-content: space-between;
+}
+.navItems >li{
+    padding:0 8px;
+    list-style-type: none;
 }
