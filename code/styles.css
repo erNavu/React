@@ -3,7 +3,15 @@
     padding :4px;
     font-family: sans-serif;
 }
-
+.btn{
+    padding: 8px;
+    margin: 0 24px;
+    border: 1px solid gray;
+    font-size: 20px;
+    border-radius: 8px;
+    min-width: 120px;
+    cursor: pointer;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -29,12 +37,26 @@
     margin-right: 4px;
 
 }
+.search_bar{
+    margin: 16px;
+    text-align: center;
+}
+.search_input{
+    margin-left: -28px;
+    width: 464px;
+    height: 48px;
+    padding: 2px 16px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
 .restaurant_list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 16px 0;
 }
+
 .restaurant_card{
     width: 320px;
     height:360px;

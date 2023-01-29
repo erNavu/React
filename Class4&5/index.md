@@ -109,3 +109,40 @@ Props in React are the properties that are passed to the components to allow the
 * Reconciliation: https://reactjs.org/docs/reconciliation.html
 * React Fiber Architecture : https://github.com/acdlite/react-fiber-architecture
 * React without es6: https://reactjs.org/docs/react-without-es6.html
+
+## What is difference between `Named` export, `default` export and `* as` export ? 
+
+`Named Export`: 
+Named exports allow you to export multiple variables, objects, or functions from a single module by assigning them each a name. They are exported as part of an object and are imported with the same name.
+
+`Default Export`:
+Default exports allow you to export a single module per file. They are exported as a default export and imported with any name.
+
+`* as Export`:
+The * as syntax allows you to import all of the exports from a module into a single object. This is useful for modules that export many components as it allows you to access all of the exports from a single object.
+
+## What is importance of config.js file?
+
+The config.js file is used to define global variables for your React application. This could include API endpoints, application settings, or any other value that you need to reference throughout your application. Having a config.js file makes it easy to store and access these variables, rather than hard-coding them into your components.
+
+## What are React hooks ?
+
+React Hooks are a `new feature in React 16.8 `that allow developers to use state and other React features without writing a class. Hooks provide a way to handle stateful logic in functional components, instead of it being done in classes. Hooks allow developers to access the state and lifecycle of components without the need to create a class.
+
+`React Hooks are simple JavaScript functions `that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.
+
+React provides a bunch of standard `in-built hooks`:
+
+* `useState`: To manage states. Returns a stateful value and an updater function to update it.
+* `useEffect`: To manage side-effects like API calls, subscriptions, timers, mutations, and more.
+* `useContext`: To return the current value for a context.
+* `useReducer`: A useState alternative to help with complex state management.
+* `useCallback`: It returns a memorized version of a callback to help a child component not re-render unnecessarily.
+* `useMemo`: It returns a memoized value that helps in performance optimizations.
+* `useRef`: It returns a ref object with a .current property. The ref object is mutable. It is mainly used to access a child component imperatively.
+* `useLayoutEffect`: It fires at the end of all DOM mutations. It's best to use useEffect as much as possible over this one as the useLayoutEffect fires synchronously.
+* `useDebugValue`: Helps to display a label in React DevTools for custom hooks.
+
+## Why do we need useState hook jn react ?
+
+The useState hook in React allows you to `add state to function components`. It is a way to manage and keep track of data that changes over time in your React application. This is important `for keeping your UI in sync with your data`, and for providing dynamic and interactive experiences for users.
