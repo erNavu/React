@@ -51,9 +51,12 @@ Examples: React, JQuery
     We can use a house as a metaphor to explain the difference between these concepts.
 >Buy a house, or build your own carefully.
 
-    A library is like building your home from scratch, you have the choice to make your house as you wish, with any architecture you like, you can sort your rooms in the way you like.
+    A library is like building your home from scratch, you have the choice to make your house as you wish,
+    with any architecture you like, you can sort your rooms in the way you like.
+    
 
-    On the other hand, Framework is like buying a new house, you don’t have to deal with building problems, but you can’t choose how to sort your rooms because the house is already built.
+    On the other hand, Framework is like buying a new house, you don’t have to deal with building problems, but you 
+    can’t choose how to sort your rooms because the house is already built.
 
 
 ### What is CDN and why do we use it? 
