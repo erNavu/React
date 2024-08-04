@@ -53,20 +53,30 @@
 .restaurant_list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 16px 0;
 }
 
 .restaurant_card{
-    width: 320px;
-    height:360px;
-    margin: 0px 4px 16px 0px;
-    /* border: 1px solid grey;
-    border-radius: 4px; */
-
+    width: 270px;
+    margin: 0 4px 24px 0px;
+    border-radius: 16px;
+    background-color: #f0f0f0;
+    -webkit-transition: all 0.5s ease; 
+    -moz-transition: all 0.5s ease; 
+    -o-transition: all 0.5s ease; 
+    -ms-transition: all 0.5s ease; 
+    transition: all 0.5s ease; 
 }
+.restaurant_card :hover {
+    cursor: pointer;
+   transform: scale(1.01);
+  
+  }
 .restaurant_img{
     width: 100%;
+    height:220px;
+    border-radius: 16px 16px 0px 0px;
 }
 .restaurant_card_text{
    padding: 2px 8px; 
@@ -86,8 +96,11 @@
     font-size: 14px;
     padding: 4px 1px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+}
+.restaurant_card_footer>div{
+    margin-right:16px;
 }
 .navItems{
     display: flex;
@@ -96,4 +109,36 @@
 .navItems >li{
     padding:0 8px;
     list-style-type: none;
+}
+
+.body-shimmer-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.body-shimmer-container> .res-shimmer{
+    background-color: #f0f0f0;
+    width: 100%;
+    height:320px;
+    width: 270px;
+    margin: 0 4px 24px 0px;
+    border-radius: 16px;
+}
+.body-shimmer-container> .res-shimmer > img{
+    width: 100%;
+    height:220px;
+    border-radius: 16px 16px 0px 0px;
+    background: #bbb;
+}
+.body-shimmer-container> .res-shimmer > .restaurant_details{
+    display: ruby-text;;
+}
+.body-shimmer-container> .res-shimmer >.restaurant_details> div{
+    width: 72%;
+    height: 20px;
+    background: #bbb;
+    margin: 3px 2px;
+    border-radius: 5px;
 }

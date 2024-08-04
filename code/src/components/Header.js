@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import companyLogo from '../assets/foodLogo.png';
 import { NAV_ITEMS } from '../config';
 
 export default function Header() {
+
+    const [btnText, setBtnText] = useState("login")
 
     return (
         <div className='header'>
@@ -16,6 +18,9 @@ export default function Header() {
                         <li key={item.id}> {item.name}</li>
                     ))}
                 </ul> : null}
+            <button onClick={() => {
+                setBtnText(btnText === "login" ? "logout" : "login")
+            }}>{btnText}</button>
         </div>
     )
 }

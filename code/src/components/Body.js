@@ -1,46 +1,50 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import RestaurantCard from '../components/RestaurantCard';
-import { RESTAURANTS_LIST } from '../config';
+import Search from '../components/Search';
+import { SWIGGY_URL } from '../utils/contants'
+import BodyShimmer from '../shimmer/BodyShimmer';
 
-const filterData = (restaurantList, searchText) => {
-    return restaurantList.filter(restaurant => restaurant.data.name.toLowerCase().includes(searchText.toLowerCase()))
-}
+const Body = () => {
+    const [restaurants, setRestaurants] = useState([])
+    const [filteredRestaurantList, setFilteredRestaurantList] = useState([])
 
-
-export default function Body() {
-    const [search, setSearch] = useState("")
-    const [restaurants, setRestaurants] = useState(RESTAURANTS_LIST)
-    handleInput = (e) => {
-        if (e.target.value === "") {
-            setRestaurants(RESTAURANTS_LIST)
-        }
-        setSearch(e.target.value)
+    const onChangeSearchInput = (searchParam) => {
+        const filteredList = restaurants.filter((item) => item.info.name.toLowerCase()
+            .includes(searchParam.toLowerCase()) ||
+            JSON.stringify(item.info.cuisines).toLowerCase().includes(searchParam.toLowerCase())
+        )
+        setFilteredRestaurantList(filteredList)
     }
-    handleSearch = (e) => {
-        e.preventDefault();
-        const data = filterData(RESTAURANTS_LIST, search)
-        setRestaurants(data)
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    const fetchData = async () => {
+        const data = await fetch(SWIGGY_URL);
+        const json = await data.json();
+        // console.log(json)
+        const resData = json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        console.log(resData)
+        setRestaurants(resData);
+        setFilteredRestaurantList(resData);
+    };
+
+    if (!restaurants?.length) {
+        return <BodyShimmer />
     }
+
     return (
         <div>
-            <div className='search_bar'>
-                <input
-                    className='search_input'
-                    type="text"
-                    placeholder='Type to search...'
-                    onChange={handleInput}
-                    value={search} />
-                <button
-                    className='btn'
-                    type="submit"
-                    onClick={handleSearch}
-                > Search</button>
-            </div>
+            <Search
+                onChangeSearchInput={onChangeSearchInput} />
             <div className='restaurant_list'>
-                {restaurants?.length ? restaurants.map((restaurant) =>
-                    (<RestaurantCard key={restaurant.data.id} {...restaurant.data} />)) :
-                    <div>NO RESTAURANT found in Your Location</div>}
+                {filteredRestaurantList?.length ?
+                    filteredRestaurantList.map((restaurant) =>
+                        (<RestaurantCard key={restaurant.info.id} {...restaurant.info} />))
+                    : <div>No Found</div>}
             </div>
         </div>
     )
 }
+
+export default Body;
