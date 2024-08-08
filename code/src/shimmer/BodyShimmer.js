@@ -1,7 +1,9 @@
+import "../styles/shimmer.css"
+
 const BodyShimmer = () => {
 
     var resShimmer = [];
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < 8; i++) {
         resShimmer.push(<div key={i} className="res-shimmer">
             <img />
             <div className="restaurant_details">

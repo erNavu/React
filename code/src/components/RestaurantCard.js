@@ -18,7 +18,7 @@ export default function RestaurantCard({ avgRating, name, cuisines, cloudinaryIm
                     {/* <div></div> */}
                     <div className='restaurant_card_cost'> • {costForTwo}</div>
                     {/* <div>•</div> */}
-                    <div className='restaurant_card_minutes'> • {sla.deliveryTime}</div>
+                    <div className='restaurant_card_minutes'> • {sla.slaString}</div>
                 </div>
             </div>
         </div>

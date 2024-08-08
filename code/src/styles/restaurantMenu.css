@@ -1,0 +1,84 @@
+
+.restaurant-menu-details-container{
+    width: 56%;
+    margin: auto;
+}
+ .menu-item-container >.menu-item{
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid #d3d3d3;
+    margin: 16px 0px;
+    padding-bottom: 16px;
+}   
+
+.menu-item-img{
+    margin-left:24px
+}
+.menu-item-img>img{
+    border-radius: 12px;
+    width: 172px;
+    max-height: 172px;
+    margin-top: 20px;
+}
+
+.menu-item-description{
+    width: 88%;
+}
+.menu-item-rating{
+    display: flex;
+    align-items: center;
+}
+.menu-item-rating >span{
+    margin-right: 4px;
+}
+.menu-item-rating >span >img{
+    width: 16px;
+    margin-top: 2px;
+}
+.menu-item-rating >.menu-item-rating-aggregatedRating{
+    color:green
+}
+.menu-item-price-container{
+    display:flex;
+    align-items: center;
+    margin: 0px;
+}
+.menu-item-price-container >span>img{
+width: 24px;
+}
+
+.restaurant-menu-details-container > .restaurant-details{
+    border-radius: 8px;
+    border:1px solid #d3d3d3;
+    padding: 4px 24px;
+}
+.restaurant-menu-details-container > .restaurant-name-logo{
+    display: flex;
+    align-items: center;
+}
+.restaurant-menu-details-container > .restaurant-name-logo>img{
+    width: 72px !important;
+    margin-right: 16px;
+}
+.restaurant-menu-details-container > .restaurant-details > .restaurant-detail-rating > img{
+width: 24px;
+margin: 4px 8px 4px 0px;
+}
+.restaurant-menu-details-container > .restaurant-details > .restaurant-detail-rating{
+    margin: 0px;
+}
+.restaurant-menu-details-container > .restaurant-details > div {
+   display: flex;
+   align-items: center;
+   margin-bottom: 8px;
+    }
+    .restaurant-menu-details-container > .restaurant-details >  .restaurant-detail-delivery{
+        border-top: 1px solid #d3d3d3;
+        padding-top: 8px;
+        margin-top: 12px;
+    }
+
+    .restaurant-menu-details-container > .restaurant-details >  .restaurant-detail-delivery>img{
+        margin-right: 12px;
+        width: 32px;
+    }

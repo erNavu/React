@@ -3,6 +3,10 @@
     padding :4px;
     font-family: sans-serif;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 .btn{
     padding: 8px;
     margin: 0 24px;
@@ -21,6 +25,15 @@
 .logo{
     display: flex;
     align-items: center;
+}
+
+.header-right-side{
+    display: flex;
+}
+.header-right-side>.login-btn{
+    margin: 8px;
+    padding: 0px 8px;
+    min-width: 60px;
 }
 .company_logo{
     width: 92px;
@@ -57,8 +70,13 @@
     margin: 16px 0;
 }
 
+.restaurant_list>.restaurant_list_link{
+    margin-bottom:24px ;
+}
+
 .restaurant_card{
     width: 270px;
+    height: 100%;
     margin: 0 4px 24px 0px;
     border-radius: 16px;
     background-color: #f0f0f0;
@@ -109,36 +127,4 @@
 .navItems >li{
     padding:0 8px;
     list-style-type: none;
-}
-
-.body-shimmer-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 16px 0;
-}
-
-.body-shimmer-container> .res-shimmer{
-    background-color: #f0f0f0;
-    width: 100%;
-    height:320px;
-    width: 270px;
-    margin: 0 4px 24px 0px;
-    border-radius: 16px;
-}
-.body-shimmer-container> .res-shimmer > img{
-    width: 100%;
-    height:220px;
-    border-radius: 16px 16px 0px 0px;
-    background: #bbb;
-}
-.body-shimmer-container> .res-shimmer > .restaurant_details{
-    display: ruby-text;;
-}
-.body-shimmer-container> .res-shimmer >.restaurant_details> div{
-    width: 72%;
-    height: 20px;
-    background: #bbb;
-    margin: 3px 2px;
-    border-radius: 5px;
 }

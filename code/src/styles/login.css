@@ -1,0 +1,43 @@
+
+.login_container > form>input[type=number], input[type=password],input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 16px 0 4px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .login_container > form > button {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 14px 20px;
+    margin: 16px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .login_container > form > button:hover {
+    opacity: 0.8;
+  }
+  
+  .login_container {
+    width: 600px;
+    margin: auto;
+}
+
+.login_container > form > .error-message {
+    color: #cc0033;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px 0 0;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 600px) {
+    .login_container {
+        width: 100%;
+    }
+  }
