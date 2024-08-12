@@ -29,10 +29,11 @@ a{
 
 .header-right-side{
     display: flex;
+    align-items: center;
 }
 .header-right-side>.login-btn{
     margin: 8px;
-    padding: 0px 8px;
+    padding: 8px;
     min-width: 60px;
 }
 .company_logo{

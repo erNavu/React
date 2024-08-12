@@ -2,7 +2,6 @@ import React from 'react'
 import { CDN_URL } from '../utils/contants'
 
 export default function RestaurantCard({ avgRating, name, cuisines, cloudinaryImageId, sla, costForTwo }) {
-
     return (
         <div className='restaurant_card'>
             <div>

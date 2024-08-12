@@ -1,28 +1,21 @@
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import "../styles/restaurantMenu.css"
-import { SWIGGY_RESTAURANT_MENU_URL, CDN_URL } from "../utils/contants"
+import { CDN_URL } from "../utils/contants"
 import Accordion from "../components/Accordion"
 import resRating from "../assets/resRating.png"
+import useOnlineStatus from '../utils/useOnlineStatus'
+import useRestaurantMenu from "../utils/useRestaurantMenu"
 
 const RestaurantMenu = () => {
-    const [restaurantDetails, setRestaurantDetails] = useState([])
     const { res } = useParams()
-
-    useEffect(() => {
-        fetchRestaurantMenu()
-    }, [])
-
-    const fetchRestaurantMenu = async () => {
-        const response = await fetch(`${SWIGGY_RESTAURANT_MENU_URL}restaurantId=${res}`)
-        const json = await response.json();
-        console.log("swiggy menu api", json)
-        setRestaurantDetails(json?.data?.cards)
-    }
+    const isOnline = useOnlineStatus()
+    const restaurantDetails = useRestaurantMenu(res)
 
     if (!restaurantDetails?.length) return (<h1>data loading...</h1>)
+
     const { name, cuisines, avgRating, costForTwoMessage, totalRatingsString, expectationNotifiers, sla, logo } = restaurantDetails[2]?.card?.card?.info
     const menuItemsData = restaurantDetails[4]?.groupedCard?.cardGroupMap.REGULAR.cards
+    if (!isOnline) return <h1>Please check your internet connect</h1>
 
     return (
         <div className="restaurant-menu-details-container">

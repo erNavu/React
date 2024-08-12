@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import RestaurantCard from '../components/RestaurantCard';
 import Search from '../components/Search';
-import { SWIGGY_URL } from '../utils/contants'
+
 import BodyShimmer from '../shimmer/BodyShimmer';
 import { Link } from 'react-router-dom';
+import useRestaurantList from '../utils/useRestaurantList';
 
 const Body = () => {
-
-    const [restaurants, setRestaurants] = useState([])
+    const restaurants = useRestaurantList()
     const [filteredRestaurantList, setFilteredRestaurantList] = useState([])
 
     const handleScroll = (e) => {
@@ -17,11 +17,13 @@ const Body = () => {
             //loadMoreRestaurants()
         }
     }
-
     useEffect(() => {
-        fetchData()
-        window.addEventListener("scroll", handleScroll)
-    }, [])
+        setFilteredRestaurantList(restaurants)
+    }, [restaurants])
+
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll)
+    // }, [])
 
     const onChangeSearchInput = (searchParam) => {
         const filteredList = restaurants.filter((item) => item.info.name.toLowerCase()
@@ -68,14 +70,7 @@ const Body = () => {
         // setFilteredRestaurantList(resData);
     };
 
-    const fetchData = async () => {
-        const data = await fetch(SWIGGY_URL);
-        const json = await data.json();
-        console.log("swiggy api", json)
-        const resData = json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        setRestaurants(resData);
-        setFilteredRestaurantList(resData);
-    };
+
 
     if (!restaurants?.length) {
         return <BodyShimmer />
