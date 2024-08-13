@@ -7,7 +7,7 @@ const RestaurantMenuItems = ({ itemCards }) => {
         <div className="menu-item-container">
             {itemCards.map((item) => (<div key={item.card.info.id} className="menu-item">
                 <div>
-                    <h3>{item.card.info.name}</h3>
+                    <h3 className='mb-1'>{item.card.info.name}</h3>
                     <p className="menu-item-price-container">
                         {/* <span><img src={discountIcon} /></span> */}
                         <span>₹ {item.card.info.defaultPrice / 100 || item.card.info.price / 100}</span></p>

@@ -1,6 +1,5 @@
 import { useState, useRef } from "react"
 import RestaurantMenuItems from "./RestaurantMenuItems";
-import '../styles/accordion.css'
 
 const Accordion = ({ data }) => {
   const [isActive, setIsActive] = useState(false)
@@ -13,14 +12,14 @@ const Accordion = ({ data }) => {
     setIsActive(!isActive)
   }
   return (
-    <div className="accordion-container">
+    <div className="my-3">
       <button
         ref={buttonRef}
         className="accordion"
         onClick={handleClick}
       >
         {data.title} ({data.itemCards.length})</button>
-      <div ref={panel} className="panel">
+      <div ref={panel} className="px-4 bg-white overflow-hidden max-h-0">
         <RestaurantMenuItems itemCards={data.itemCards} />
       </div>
     </div>

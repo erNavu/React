@@ -80,10 +80,10 @@ const Body = () => {
         <div >
             <Search
                 onChangeSearchInput={onChangeSearchInput} />
-            <div className='restaurant_list' >
+            <div className='flex flex-wrap justify-center my-4' >
                 {filteredRestaurantList?.length ?
                     filteredRestaurantList.map((restaurant) =>
-                    (<Link className="restaurant_list_link" to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}>
+                    (<Link className="mb-6" to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}>
                         <RestaurantCard  {...restaurant.info} />
                     </Link>))
                     : <div>No Found</div>}

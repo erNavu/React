@@ -64,9 +64,7 @@ width: 24px;
 width: 24px;
 margin: 4px 8px 4px 0px;
 }
-.restaurant-menu-details-container > .restaurant-details > .restaurant-detail-rating{
-    margin: 0px;
-}
+
 .restaurant-menu-details-container > .restaurant-details > div {
    display: flex;
    align-items: center;

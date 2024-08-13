@@ -21,9 +21,9 @@ const RestaurantMenu = () => {
         <div className="restaurant-menu-details-container">
             <div className="restaurant-name-logo">
                 {logo ? <img src={CDN_URL + logo} /> : null}
-                <span><h1>{name} </h1></span></div>
+                <span><h1 className="text-2xl mb-3">{name} </h1></span></div>
             <div className="restaurant-details">
-                <div className="restaurant-detail-rating">
+                <div className="restaurant-detail-rating my-1">
                     <img src={resRating}></img>
                     <h4>{avgRating} ( {totalRatingsString}) • {costForTwoMessage}
                     </h4>
