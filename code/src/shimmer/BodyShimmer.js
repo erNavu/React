@@ -4,18 +4,21 @@ const BodyShimmer = () => {
 
     var resShimmer = [];
     for (var i = 0; i < 8; i++) {
-        resShimmer.push(<div key={i} className="res-shimmer">
-            <img />
-            <div className="restaurant_details">
-                <div className='restaurant_name'></div>
-                <div className='restaurant_cuisines'></div>
-                <div className='restaurant_footer'></div>
-            </div>
-        </div>);
+        resShimmer.push(
+            <div key={i} className="card">
+                <div className="loader-shimmer-banner shimmer-animation"></div>
+                <div className="loader-shimmer-content">
+                    <div className="loader-shimmer-header">
+                        <div className="loader-shimmer-title shimmer-animation"></div>
+                    </div>
+                    <div className="loader-shimmer-list shimmer-animation"></div>
+                    <div className="loader-shimmer-info shimmer-animation"></div>
+                </div>
+            </div>);
     }
 
     return (
-        <div className="body-shimmer-container">
+        <div className="flex flex-wrap">
             {resShimmer}
         </div>
     )

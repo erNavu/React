@@ -1,5 +1,5 @@
 
-.login_container > form>input[type=number], input[type=password],input[type=email] {
+.login_container > form>input[type=number], input[type=password],input[type=email],input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 16px 0 4px;

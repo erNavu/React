@@ -4,8 +4,6 @@
 
 
  .accordion{
-    @apply bg-slate-100 hover:bg-slate-200 text-gray-800 cursor-pointer p-4 w-[100%] border-none text-left text-lg after:content-['\002B'] after:ml-2 after:float-right font-semibold text-slate-600
+    @apply bg-slate-100 rounded-lg shadow-lg mb-1 hover:bg-slate-200 text-gray-800 cursor-pointer p-3 w-[100%] border-none text-left text-lg font-semibold text-slate-600
  }
- .active {
-    @apply bg-slate-200 after:content-['\2212'];
-  }
+

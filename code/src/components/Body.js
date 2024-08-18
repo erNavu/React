@@ -5,10 +5,12 @@ import Search from '../components/Search';
 import BodyShimmer from '../shimmer/BodyShimmer';
 import { Link } from 'react-router-dom';
 import useRestaurantList from '../utils/useRestaurantList';
+import withDiscountTagRestaurantCard from '../utils/withDiscountTagRestaurantCard';
 
 const Body = () => {
-    const restaurants = useRestaurantList()
+    const restaurants = useRestaurantList([])
     const [filteredRestaurantList, setFilteredRestaurantList] = useState([])
+    const DiscountTagRestaurantCard = withDiscountTagRestaurantCard(RestaurantCard)
 
     const handleScroll = (e) => {
         const el = e.target.documentElement
@@ -69,13 +71,6 @@ const Body = () => {
         // setRestaurants(resData);
         // setFilteredRestaurantList(resData);
     };
-
-
-
-    if (!restaurants?.length) {
-        return <BodyShimmer />
-    }
-
     return (
         <div >
             <Search
@@ -84,12 +79,15 @@ const Body = () => {
                 {filteredRestaurantList?.length ?
                     filteredRestaurantList.map((restaurant) =>
                     (<Link className="mb-6" to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}>
-                        <RestaurantCard  {...restaurant.info} />
+                        {/* {console.log("hello data", restaurant.info.aggregatedDiscountInfoV3)} */}
+                        {restaurant.info.aggregatedDiscountInfoV3?.discountTag ? <DiscountTagRestaurantCard resData={restaurant.info} /> : <RestaurantCard resData={restaurant.info} />}
+
                     </Link>))
-                    : <div>No Found</div>}
+                    : <BodyShimmer />}
             </div>
         </div>
     )
 }
 
 export default Body;
+

@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import "../styles/login.css"
+import { UserContext } from '../utils/UserContext';
 
 const Login = () => {
+    const { setUserData } = useContext(UserContext)
+    const navigate = useNavigate();
 
     const validations = (values) => {
         const errors = {};
+        if (!values.name) {
+            errors.name = "Required";
+        } else if (values.name.length < 3) {
+            errors.name = "Name must be at least 3 characters"
+        }
         if (!values.phoneNo) {
             errors.phoneNo = "Required";
         } else if (values.phoneNo.toString().length !== 10) {
@@ -28,20 +37,23 @@ const Login = () => {
     }
 
     const handleSubmit = (values, setSubmitting) => {
-        alert(JSON.stringify(values, null, 2));
+        setUserData(values)
         setSubmitting(false);
+        navigate('/profile')
     }
 
     return (
         <div className="login_container">
             <h1>Login Page</h1>
             <Formik
-                initialValues={{ phoneNo: "", email: "", password: "" }}
+                initialValues={{ phoneNo: "", email: "", password: "", name: "" }}
                 validate={(values) => validations(values)}
                 onSubmit={(values, { setSubmitting }) => handleSubmit(values, setSubmitting)}
             >
                 {({ isSubmitting }) => (
                     <Form>
+                        <Field type="text" name="name" placeholder="Enter your Name" />
+                        <ErrorMessage name="name" className='error-message' component="div" />
                         <Field
                             type="number"
                             name="phoneNo"

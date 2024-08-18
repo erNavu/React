@@ -3,7 +3,6 @@ import "../styles/error404.css"
 
 const ErrorPage = () => {
     const error = useRouteError();
-    console.log(error, "error")
     return (
         <div class="page_404">
             <div class="container">

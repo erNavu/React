@@ -7,9 +7,9 @@ export const SWIGGY_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=3
 
 export const SWIGGY_RESTAURANT_MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.3397809&lng=76.3868797&";
 
-export const NAV_ITEMS = [{ name: "Home", id: "home", url: "/home", icon: "", link: "" },
-{ name: "About Us ", id: "about", url: "/about", icon: "", link: 'about' },
-{ name: "Contact", id: "contact", url: "/contact", icon: "", link: 'contact' },
-{ name: "Cart", id: "cart", url: "/cart", icon: "", link: 'cart' },
-{ name: "Grocery", id: "grocery", url: "/grocery", icon: "", link: 'grocery' }
+export const NAV_ITEMS = [{ name: "Home", id: "home", icon: "", link: "" },
+{ name: "About Us ", id: "about", icon: "", link: 'about' },
+{ name: "Contact", id: "contact", icon: "", link: 'contact' },
+{ name: "Cart", id: "cart", icon: "", link: 'cart' },
+{ name: "Grocery", id: "grocery", icon: "", link: 'grocery' }
 ]
