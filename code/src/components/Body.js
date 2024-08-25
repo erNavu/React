@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+
 import RestaurantCard from '../components/RestaurantCard';
 import Search from '../components/Search';
-
 import BodyShimmer from '../shimmer/BodyShimmer';
-import { Link } from 'react-router-dom';
 import useRestaurantList from '../utils/useRestaurantList';
 import withDiscountTagRestaurantCard from '../utils/withDiscountTagRestaurantCard';
+import { useGetAllRestaurantsListQuery } from "../redux/apiSlice"
 
 const Body = () => {
-    const restaurants = useRestaurantList([])
+    // const restaurants = useRestaurantList([])
+    // data from redux toolkit query
+    const { data } = useGetAllRestaurantsListQuery()
+    const restaurants = data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     const [filteredRestaurantList, setFilteredRestaurantList] = useState([])
     const DiscountTagRestaurantCard = withDiscountTagRestaurantCard(RestaurantCard)
 

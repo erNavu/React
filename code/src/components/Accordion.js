@@ -1,5 +1,4 @@
-
-import RestaurantMenuItems from "./RestaurantMenuItems";
+import RestaurantMenuItems from "./RestaurantMenuItems"
 
 const Accordion = ({ data, isActive, onClickAccordion }) => {
 
@@ -14,7 +13,7 @@ const Accordion = ({ data, isActive, onClickAccordion }) => {
       </button>
 
       {isActive && <div className="px-4 bg-white ">
-        <RestaurantMenuItems itemCards={data.itemCards} />
+        {data.itemCards?.map(item => <RestaurantMenuItems key={item.card.info.id} item={item.card.info} />)}
       </div>}
     </div>
   )

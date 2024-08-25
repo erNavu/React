@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import "../styles/restaurantMenu.css"
 import { CDN_URL } from "../utils/contants"
@@ -6,25 +6,32 @@ import Accordion from "../components/Accordion"
 import resRating from "../assets/resRating.png"
 import useOnlineStatus from '../utils/useOnlineStatus'
 import useRestaurantMenu from "../utils/useRestaurantMenu"
-import Loader from "./Loader"
+import Loader from "../components/Loader"
+import { useGetRestaurantMenuQuery } from "../redux/apiSlice"
 
 const RestaurantMenu = () => {
     const { res } = useParams()
     const isOnline = useOnlineStatus()
-    const restaurantDetails = useRestaurantMenu(res)
+    // const restaurantDetails = useRestaurantMenu(res)
+    const { data, isLoading } = useGetRestaurantMenuQuery(res)
+    const restaurantDetails = data?.data?.cards
+
     const [isAccordionActive, setIsAccordionActive] = useState(null)
 
-    if (!restaurantDetails?.length) return (<Loader />)
+    useEffect(() => {
+        localStorage.setItem('restaurantId', JSON.stringify(res));
+    }, [res]);
+
+    if (isLoading) return (<Loader />)
 
     const { name, cuisines, avgRating, costForTwoMessage, totalRatingsString, expectationNotifiers, sla, logo } = restaurantDetails[2]?.card?.card?.info
     const menuItemsData = restaurantDetails[4]?.groupedCard?.cardGroupMap.REGULAR.cards?.filter(item => item.card.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" || item.card.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory")
+
     const handleAccordionClick = (title) => {
         title === isAccordionActive ? setIsAccordionActive(null) : setIsAccordionActive(title)
     }
 
     if (!isOnline) return <h1>Please check your internet connect</h1>
-
-    console.log("menu", menuItemsData)
 
     return (
         <div className="restaurant-menu-details-container">

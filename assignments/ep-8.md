@@ -137,16 +137,19 @@ And when you unmount the component, you'll see:
 5. componentWillUnmount
 ```
 
-<img src="../assetsTheory/cycleMethods.png" alt="life cycle Methods" style="height: 420px; width:640px;"/>
+<img src="../assetsTheory/cycleMethods.png" alt="life cycle Methods"/>
 fig:1 Diagram showing Class Based component life cycle methods 
 
-<img src="../assetsTheory/lifecyclemethodsOld.webp" alt="life cycle Methods" style="height: 420px; width:640px;"/>
+
+<img src="../assetsTheory/lifecyclesmethodsOld.webp" alt="life cycle Methods" />
 fig:2 Diagram showing Class Based component life cycle methods (older version)
 
-<img src="../assetsTheory/hooksLifecycleMethods.webp" alt="life cycle Methods compare" style="height: 420px; width:640px;"/>
+
+<img src="../assetsTheory/hooksLifecycleMethods.webp" alt="life cycle Methods compare"/>
 fig:3 Diagram showing hooks/ functionally life cycle methods 
 
-<img src="../assetsTheory/lifecycleMethodsCompare.jpg" alt="life cycle Methods compare" style="height: 420px; width:640px;"/>
+
+<img src="../assetsTheory/lifecycleMethodsCompare.jpg" alt="life cycle Methods compare"/>
 fig:4 Diagram showing comparison between life cycle methods of class based life cycle methods and functionally life cycle methods 
 
 ## Why do we use componentDidMount?
